@@ -1,0 +1,2 @@
+# Region-Wise-Perceptual-and-Cryptographic-Framework-for-Medical-Image-Integrity-Verification
+This project presents a region-wise perceptual hashing and cryptographic verification system to detect tampering in medical images. By combining perceptual fingerprinting with ECDSA-based signing, it ensures the authenticity, integrity, and traceability of clinical images shared across healthcare networks.
