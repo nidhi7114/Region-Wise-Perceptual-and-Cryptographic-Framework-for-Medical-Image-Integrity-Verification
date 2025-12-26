@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Batch Verification Results</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <style>
+        body { padding: 30px; background-color: #f9fafb; }
+        table { margin-top: 20px; }
+        th, td { text-align: center; vertical-align: middle; }
+        .tampered { color: red; font-weight: bold; }
+        .not-tampered { color: green; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="mb-3 text-center">🧩 Batch Verification Results</h2>
+        <p class="text-muted text-center"><strong>Timestamp:</strong> {{ timestamp }}</p>
+
+        <div class="alert alert-info text-center">
+            <strong>Total Images:</strong> {{ batch_stats.total_images }} |
+            <strong>Tampered:</strong> {{ batch_stats.total_tampered }} |
+            <strong>Not Tampered:</strong> {{ batch_stats.total_not_tampered }}
+        </div>
+
+        <table class="table table-bordered table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>Original Filename</th>
+                    <th>Matched Tampered File</th>
+                    <th>Verification Status</th>
+                    <th>Avg Hamming Distance</th>
+                    <th>Error</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in summary %}
+                <tr>
+                    <td>{{ row.original }}</td>
+                    <td>{{ row.matched_tampered if row.matched_tampered else '-' }}</td>
+                    <td class="{% if row.tampered == 'Tampered' %}tampered{% elif row.tampered == 'Not Tampered' %}not-tampered{% endif %}">
+                        {{ row.tampered if row.tampered else '-' }}
+                    </td>
+                    <td>{{ row.hamming if row.hamming is not none else '-' }}</td>
+                    <td>{{ row.error if row.error else '-' }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <a href="{{ url_for('index') }}" class="btn btn-primary mt-4">⬅ Back to Home</a>
+    </div>
+</body>
+</html>

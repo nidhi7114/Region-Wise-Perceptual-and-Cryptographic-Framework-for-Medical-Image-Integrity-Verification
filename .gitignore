@@ -1,0 +1,29 @@
+# virtual environment
+.venv/
+
+# python cache
+__pycache__/
+*.pyc
+
+# secrets
+*.pem
+
+# databases
+*.db
+
+# large files
+*.tar.gz
+
+# IDE
+.vscode/
+
+dataset/
+
+# uploaded images / user data
+uploads/*
+
+# keep folder but not files
+!uploads/.gitkeep
+
+*.pptx
+*.pdf

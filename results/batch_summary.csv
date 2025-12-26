@@ -1,0 +1,16 @@
+original,matched_tampered,tampered,hamming,mismatch_ratio,error
+00000001_000.png,00000001_000.png,Not Tampered,0.0,0.0,-
+00000001_001.png,00000001_001.png,Not Tampered,0.0,0.0,-
+00000001_002.png,00000001_002.png,Not Tampered,0.0,0.0,-
+00000002_000.png,00000002_000.png,Not Tampered,0.0,0.0,-
+00000003_000.png,blur_00000003_000.png,Not Tampered,0.44,0.22,-
+00000003_001.png,blur_00000003_001.png,Tampered,0.89,0.44,-
+00000003_002.png,blur_00000003_002.png,Not Tampered,0.89,0.22,-
+00000003_003.png,blur_00000003_003.png,Tampered,0.67,0.33,-
+00000003_004.png,blur_00000003_004.png,Not Tampered,0.44,0.22,-
+00000003_005.png,blur_00000003_005.png,Not Tampered,0.0,0.0,-
+00000003_006.png,contrast_00000003_006.png,Tampered,4.67,1.0,-
+00000003_007.png,contrast_00000003_007.png,Not Tampered,0.44,0.22,-
+00000004_000.png,contrast_00000004_000.png,Not Tampered,0.44,0.22,-
+00000005_000.png,contrast_00000005_000.png,Tampered,0.89,0.33,-
+00000005_001.png,contrast_00000005_001.png,Tampered,2.0,0.67,-

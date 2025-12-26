@@ -1,0 +1,8 @@
+Timestamp,Filename,Tampered,Signature Match,Hamming Distance,SHA256 Match
+2025-05-29T14:35:00.537525,Untitled_design_1.jpg,No,Yes,0,Yes
+2025-05-29T14:35:31.835409,Untitled_design_1.jpg,No,Yes,0,Yes
+2025-05-30T10:13:16.684097,Untitled_design_1.jpg,Yes,No,0,Yes
+2025-05-30T12:57:28.250018,3.jpg,Yes,No,0,Yes
+2025-05-30T13:20:09.422687,Im9_col2.jpg,No,Yes,0,Yes
+2025-06-01T09:47:06.435922,Im9_4_col.jpg,Yes,No,0,Yes
+2025-06-01T10:20:14.320232,Im9_2.jpg,Yes,No,0,Yes
